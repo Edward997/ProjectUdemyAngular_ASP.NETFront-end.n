@@ -10,7 +10,8 @@
     <div 
         *ngFor="let pelicula of peliculas; let index = index" 
         class="pelicula-contenedor">
-        <div>Pelicula {{index}}: {{pelicula.titulo | lowercase}}</div>
+        <div>Pelicula {{index}}: {{pelicula.titulo | lowercase}} 
+            <button style="margin-left: 1rem;" (click)="remover(index)">Remover</button></div>
         <div>{{pelicula.fechaLanzamiento | date:"dd-MMMM-YYYY" | uppercase}}</div>
         <div>{{pelicula.precio | currency}}</div>
     </div>
