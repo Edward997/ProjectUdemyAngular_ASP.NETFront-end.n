@@ -1,24 +1,7 @@
+<h2>En Cines</h2>
 
-<p>Hola Mundo</p>
-<div>{{title}}</div>
-<div>la suma de 2 y 2 es {{2 + 2}}</div>
-<div>El boble de 3 es {{duplicarNumero(3)}}</div>
-<h2>Datos de la Peliculas</h2>
+<app-listado-peliculas></app-listado-peliculas>
 
-<div *ngIf="!peliculas">
-    <img src = "https://www.wpfaster.org/wp-content/uploads/2013/06/loading-gif.gif" />
-</div>
+<h2>Futuros Estrenos</h2>
 
-<div *ngIf="peliculas?.length === 0">
-    <p>No hay peliculas para mostrar</p>
-</div>
-
-<div *ngIf="peliculas && peliculas.length > 0">
-    <div 
-        *ngFor="let pelicula of peliculas; let index = index" 
-        class="pelicula-contenedor">
-        <div>Pelicula {{index}}: {{pelicula.titulo | lowercase}}</div>
-        <div>{{pelicula.fechaLanzamiento | date:"dd-MMMM-YYYY" | uppercase}}</div>
-        <div>{{pelicula.precio | currency}}</div>
-    </div>
-</div>
+<app-listado-peliculas></app-listado-peliculas>

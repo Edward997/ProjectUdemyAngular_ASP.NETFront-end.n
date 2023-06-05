@@ -1,0 +1,17 @@
+<div *ngIf="!peliculas">
+    <img src = "https://www.wpfaster.org/wp-content/uploads/2013/06/loading-gif.gif" />
+</div>
+
+<div *ngIf="peliculas?.length === 0">
+    <p>No hay peliculas para mostrar</p>
+</div>
+
+<div *ngIf="peliculas && peliculas.length > 0">
+    <div 
+        *ngFor="let pelicula of peliculas; let index = index" 
+        class="pelicula-contenedor">
+        <div>Pelicula {{index}}: {{pelicula.titulo | lowercase}}</div>
+        <div>{{pelicula.fechaLanzamiento | date:"dd-MMMM-YYYY" | uppercase}}</div>
+        <div>{{pelicula.precio | currency}}</div>
+    </div>
+</div>
