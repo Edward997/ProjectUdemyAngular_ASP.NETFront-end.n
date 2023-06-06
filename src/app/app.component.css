@@ -11,3 +11,7 @@ p {
 img{
     max-width: 10%;
 }
+
+.contenedor {
+    margin: 20px;
+}
