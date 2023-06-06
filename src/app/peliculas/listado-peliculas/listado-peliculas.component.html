@@ -1,12 +1,10 @@
-<div *ngIf="!peliculas">
-    <img src = "https://www.wpfaster.org/wp-content/uploads/2013/06/loading-gif.gif" />
-</div>
 
-<div *ngIf="peliculas?.length === 0">
-    <p>No hay peliculas para mostrar</p>
-</div>
+<app-listado-generico [listado]="peliculas">
+    <ng-container vacio>
+        <div>Mensaje Personalizado para <b>vacio</b></div>
+    </ng-container>
 
-<ng-container *ngIf="peliculas && peliculas.length > 0">
+    <ng-container contenido>
     <div 
         *ngFor="let pelicula of peliculas; let index = index" 
         class="pelicula-contenedor">
@@ -15,4 +13,5 @@
         <div>{{pelicula.fechaLanzamiento | date:"dd-MMMM-YYYY" | uppercase}}</div>
         <div>{{pelicula.precio | currency}}</div>
     </div>
-</ng-container>
+    </ng-container>
+</app-listado-generico>
