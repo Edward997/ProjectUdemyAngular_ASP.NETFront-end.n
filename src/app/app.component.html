@@ -4,23 +4,11 @@
 <div class="contenedor">
 
 
-<div>
-    <input type="text" (input)="title = $event.target.value" />
+    <h2>En Cines</h2>
 
-</div>
+    <app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
 
-<div>
-    <input type="checkbox" checked (change)="ocultar = !ocultar" />ocultar
-</div>
-    <app-ciclo-de-vid *ngIf="ocultar" [titulo]="title"></app-ciclo-de-vid>
+    <h2>Futuros Estrenos</h2>
 
-
-<!--
-<h2>En Cines</h2>
-
-<app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
-
-<h2>Futuros Estrenos</h2>
-
-<app-listado-peliculas [peliculas]="peliculasProximosEstrenos"></app-listado-peliculas>-->
+    <app-listado-peliculas [peliculas]="peliculasProximosEstrenos"></app-listado-peliculas>
 </div>

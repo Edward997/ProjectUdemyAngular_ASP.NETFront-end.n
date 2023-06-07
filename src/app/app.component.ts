@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
         fechaLanzamiento: new Date('2016-11-14'),
         precio: 300.99
       }] 
-    },3000);
+    },500);
   }
   title = 'El valor que sea xd';
   ocultar = false;
