@@ -1,11 +1,34 @@
+.peliculas-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
 .pelicula-contenedor{
-    border: 1px solid black;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-    background-color: rgb(152, 152, 187);
+    margin-right: 2%;
+    margin-bottom: 10px;
+    text-align: center;
+    
 }
 
 img{
     max-width: 10%;
+}
+p{
+    max-width: 225px;
+    height: 44px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+image {
+    width: 225px;
+    height: 300px;
+	object-fit: cover
+}
+
+button{
+    margin-left: 1em;
 }
