@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
     },3000);
   }
   title = 'El valor que sea xd';
-
+  ocultar = false;
   peliculasEnCines;
   peliculasProximosEstrenos =[];
 

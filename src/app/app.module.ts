@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule} from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilidades/rating/rating.component';
+import { CicloDeVidComponent } from './ciclo-de-vid/ciclo-de-vid.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RatingComponent } from './utilidades/rating/rating.component';
     ListadoPeliculasComponent,
     ListadoGenericoComponent,
     MenuComponent,
-    RatingComponent
+    RatingComponent,
+    CicloDeVidComponent
   ],
   imports: [
     BrowserModule,
