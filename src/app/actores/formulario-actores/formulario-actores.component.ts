@@ -27,12 +27,17 @@ export class FormularioActoresComponent {
           validators: [Validators.required],
         },
       ],
-      fechaNacimiento: ''
+      fechaNacimiento: '',
+      foto: ''
     });
 
     if (this.modelo !== undefined){
       this.form.patchValue(this.modelo)
     }
+  }
+
+  archivoSeleccionado(file){
+    this.form.get('foto').setValue(file);
   }
 
   onSubmit(){
