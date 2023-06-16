@@ -8,6 +8,7 @@ import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms'
 import {MarkdownModule} from 'ngx-markdown'
+import {LeafletModule} from '@asymmetrik/ngx-leaflet'
 
 import { MaterialModule} from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
@@ -29,6 +30,7 @@ import { FiltroPeliculasComponent } from './peliculas/filtro-peliculas/filtro-pe
 import { FormularioActoresComponent } from './actores/formulario-actores/formulario-actores.component';
 import { InputImgComponent } from './utilidades/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component';
+import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
 
 
 @NgModule({
@@ -55,6 +57,7 @@ import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdo
     FormularioActoresComponent,
     InputImgComponent,
     InputMarkdownComponent,
+    FormularioCineComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdo
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    LeafletModule,
     MarkdownModule.forRoot()
   ],
   providers: [],
