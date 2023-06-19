@@ -8,7 +8,7 @@ import { cineCreacionDTO, cineDTO } from '../cines';
 })
 export class EditarCineComponent {
 
-  modelo: cineDTO = {nombre: "Sambil"};
+  modelo: cineDTO = {nombre: "Sambil", latitud: 19.86054458432284, longitud: -99.909828901290911};
   
   guardarCambios(cine: cineCreacionDTO){
     console.log(cine);
