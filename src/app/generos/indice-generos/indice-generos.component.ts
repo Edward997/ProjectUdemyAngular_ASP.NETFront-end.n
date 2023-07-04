@@ -19,26 +19,12 @@ export class IndiceGenerosComponent implements OnInit {
   cantidadRegistrosAMostrar = 10;
 
   ngOnInit():void {
-    // this.generosService.obtenerTodos(this.paginaActual, this.cantidadRegistrosAMostrar)
-    // .subscribe((respuesta: HttpResponse<generoDTO[]>) => {
-    //   this.generos = respuesta.body;
-    //   console.log(respuesta.headers.get("cantidadtotalregsitros"));
-    //   this.cantidadTotalRegistros = respuesta.headers.get("cantidadTotalRegistros");
-    // }, error => console.error(error));
-    
-
-    this.generosService.obtenerTodos(this.paginaActual, this.cantidadRegistrosAMostrar).subscribe({
-      next: (respose : HttpResponse<generoDTO[]>)=> {
-
-
-        console.log(respose.headers.get('CantidadTotalRegistros'))
-
-      },
-        error: ()=> {
-
-        }
-        
-      
-    })
-  }}
-
+    this.generosService.obtenerTodos(this.paginaActual, this.cantidadRegistrosAMostrar)
+    .subscribe((respuesta: HttpResponse<generoDTO[]>) => {
+      this.generos = respuesta.body;
+      console.log(respuesta.headers.get("cantidadTotalRegistros"));
+      this.cantidadTotalRegistros = respuesta.headers.get("cantidadTotalRegistros");
+    }, error => console.error(error));
+     
+  }
+}
