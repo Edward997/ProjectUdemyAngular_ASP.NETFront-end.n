@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GenerosService } from '../generos.service';
 import { generoDTO } from '../genero';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-indice-generos',
@@ -13,12 +14,31 @@ export class IndiceGenerosComponent implements OnInit {
   
   generos: generoDTO[];
   columnasAMostrar = ['id', 'nombre', 'acciones'];
+  cantidadTotalRegistros;
+  paginaActual = 1;
+  cantidadRegistrosAMostrar = 10;
 
   ngOnInit():void {
-    this.generosService.obtenerTodos()
-    .subscribe(generos => {
-      this.generos = generos;
-    }, error => console.error(error));
+    // this.generosService.obtenerTodos(this.paginaActual, this.cantidadRegistrosAMostrar)
+    // .subscribe((respuesta: HttpResponse<generoDTO[]>) => {
+    //   this.generos = respuesta.body;
+    //   console.log(respuesta.headers.get("cantidadtotalregsitros"));
+    //   this.cantidadTotalRegistros = respuesta.headers.get("cantidadTotalRegistros");
+    // }, error => console.error(error));
     
-  }
-}
+
+    this.generosService.obtenerTodos(this.paginaActual, this.cantidadRegistrosAMostrar).subscribe({
+      next: (respose : HttpResponse<generoDTO[]>)=> {
+
+
+        console.log(respose.headers.get('CantidadTotalRegistros'))
+
+      },
+        error: ()=> {
+
+        }
+        
+      
+    })
+  }}
+
